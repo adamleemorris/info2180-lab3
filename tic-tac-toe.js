@@ -37,7 +37,7 @@ function boxclicked(e){
 
         if(playerHasWon()!==false){
             playerText.innerHTML=`Congratulations! ${currentPlayer} is the Winner!`;
-            playerText.style.color="green";
+            playerText.style.color="--green";
             playerText.style.fontWeight="bold";
             playerText.style.border-top;"4px solid var(--green)";
             let winning_blocks= playerHasWon()
@@ -84,7 +84,7 @@ function restart() {
         square.innerText=''
         square.style.backgroundColor=''
     })   
-    playerText = 'Move your mouse over a square and click to play an X or an O.'
+    playerText.innerHTML = 'Move your mouse over a square and click to play an X or an O.'
     currentPlayer = X_Text
 }
 
