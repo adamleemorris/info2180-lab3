@@ -1,6 +1,6 @@
 let playerText= document.getElementById('status')
 let restartBtn= document.getElementsByClassName('btn')
-//let restartbtn= document.getElementById('btn')
+let restartbtn= document.getElementById('btn1')
 let boxes= Array.from(document.getElementsByClassName('square'))
 let winnerIndicator= getComputedStyle(document.body).getPropertyValue('--green')
 
@@ -72,13 +72,11 @@ function playerHasWon(){
     return false
 
 }
-//window.addEventListener("DOMContentLoaded",(event)=>{
- //   if(restartBtn){
-         const restartBtn= document.querySelector('#restart');
-         
-         restartBtn.addEventListener('click',restart());
-    //}
-//});
+window.addEventListener("DOMContentLoaded",(event)=>{
+    if(restartbtn){       
+         restartbtn.addEventListener('click',restart);
+    }
+});
 
 function restart() {
     spaces.fill(null)
